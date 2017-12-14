@@ -9,7 +9,7 @@ void Run<Day01>(Part part, istream& is, ostream& os)
 		int sum = 0;
 
 		string arg;
-		while(getline(is, arg, ','))
+		while(getline(is, arg))
 		{
 			if(arg.length() > 1)
 			{
