@@ -3,6 +3,7 @@
 
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include <algorithm>
 
 template <typename T>
 inline T sqr(T x)
@@ -25,11 +26,23 @@ inline int ToInt(char c)
     return(c - '0');
 }
 
+template <typename T>
+inline T Min(const T& left, const T& right)
+{
+	return std::min(left, right);
+}
+
+template <typename T>
+inline T Max(const T& left, const T& right)
+{
+	return std::max(left, right);
+}
+
 // Inclusive clamp
 template <typename T>
 inline T Clamp(const T& n, const T& lower, const T& upper)
 {
-    return std::max(lower, std::min(n, upper));
+    return Max(lower, Min(n, upper));
 }
 
 #endif // ADVENT_MATH_H
