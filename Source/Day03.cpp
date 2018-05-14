@@ -9,8 +9,8 @@ int GetAdjacentSum(const vector<vector<int>>& Grid, int i, int j)
 	{
 		for(int y = -1; y <= 1; ++y)
 		{
-			int adjI = i + x;
-			int adjJ = j + y;
+			unsigned int adjI = i + x;
+			unsigned int adjJ = j + y;
 			if(adjI < Grid.size() && adjJ < Grid.size())
 			{
 				sum += Grid[adjI][adjJ];
@@ -122,9 +122,9 @@ int GenerateSpiralGridAdjacentSum(int GRID_SIZE, int threshold)
 
 pair<int, int> GetGridCoords(const vector<vector<int>>& Grid, int value)
 {
-	for(int i = 0; i < Grid.size(); ++i)
+	for(unsigned int i = 0; i < Grid.size(); ++i)
 	{
-		for(int j = 0; j < Grid.size(); ++j)
+		for(unsigned int j = 0; j < Grid.size(); ++j)
 		{
 			if(Grid[i][j] == value)
 			{
@@ -137,9 +137,9 @@ pair<int, int> GetGridCoords(const vector<vector<int>>& Grid, int value)
 
 void PrintGrid(const vector<vector<int>>& Grid, ostream& os)
 {
-	for(int i = 0; i < Grid.size(); ++i)
+	for(unsigned int i = 0; i < Grid.size(); ++i)
 	{
-		for(int j = 0; j < Grid.size(); ++j)
+		for(unsigned int j = 0; j < Grid.size(); ++j)
 		{
 			int num = Grid[i][j];
 			char* spacing = "   ";

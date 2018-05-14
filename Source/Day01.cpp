@@ -13,7 +13,7 @@ void Run<Day01>(Part part, istream& is, ostream& os)
 		{
 			if(arg.length() > 1)
 			{
-				for(int i = 0; i < arg.length(); ++i)
+				for(unsigned int i = 0; i < arg.length(); ++i)
 				{
 					// First index should compare to last, all others should compare to previous
 					size_t j = (i == 0) ? arg.length() - 1 : i - 1;
@@ -36,7 +36,7 @@ void Run<Day01>(Part part, istream& is, ostream& os)
 			if(arg.length() > 1 && arg.length() % 2 == 0)
 			{
 				size_t step = (arg.length() / 2);
-				for(int i = 0; i < arg.length(); ++i)
+				for(unsigned int i = 0; i < arg.length(); ++i)
 				{
 					// Adjust j to wrap around
 					size_t j = i + step;
