@@ -1,5 +1,5 @@
 #include "Days.h"
-#include "AdventMath.h"
+#include "AdventUtils.h"
 
 template <>
 void Run<Day01>(Part part, istream& is, ostream& os)
@@ -19,7 +19,7 @@ void Run<Day01>(Part part, istream& is, ostream& os)
 					size_t j = (i == 0) ? arg.length() - 1 : i - 1;
 					if(arg[i] == arg[j])
 					{
-						sum += ToInt(arg[i]);
+						sum += CharToInt(arg[i]);
 					}
 				}
 			}
@@ -46,7 +46,7 @@ void Run<Day01>(Part part, istream& is, ostream& os)
 					}
 					if(arg[i] == arg[j])
 					{
-						sum += ToInt(arg[i]);
+						sum += CharToInt(arg[i]);
 					}
 				}
 			}

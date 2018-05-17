@@ -21,11 +21,6 @@ inline double ToDegrees(double radians)
 	return(radians * (180.0 / M_PI));
 }
 
-inline int ToInt(char c)
-{
-    return(c - '0');
-}
-
 template <typename T>
 inline T Min(const T& left, const T& right)
 {
